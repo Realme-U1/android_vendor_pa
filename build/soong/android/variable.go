@@ -33,6 +33,9 @@ type Product_variables struct {
 	Target_uses_prebuilt_dynamic_partitions struct {
 		Cflags []string
 	}
+	Target_ignores_ftp_pptp_conntrack_failure struct {
+		Cppflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -46,4 +49,5 @@ type ProductVariables struct {
 	Target_surfaceflinger_fod_lib  *string `json:",omitempty"`
 	Target_uses_color_metadata  *bool `json:",omitempty"`
 	Target_uses_prebuilt_dynamic_partitions  *bool `json:",omitempty"`
+	Target_ignores_ftp_pptp_conntrack_failure  *bool `json:",omitempty"`
 }

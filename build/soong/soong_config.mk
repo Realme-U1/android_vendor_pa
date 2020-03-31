@@ -13,6 +13,7 @@ $(call add_json_str_omitempty, Target_shim_libs, $(subst $(space),:,$(TARGET_LD_
 $(call add_json_str_omitempty, Target_surfaceflinger_fod_lib, $(TARGET_SURFACEFLINGER_FOD_LIB))
 $(call add_json_bool, Target_uses_color_metadata, $(filter true,$(TARGET_USES_COLOR_METADATA)))
 $(call add_json_bool, Target_uses_prebuilt_dynamic_partitions,   $(filter true,$(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)))
+$(call add_json_bool, Target_ignores_ftp_pptp_conntrack_failure, $(filter true,$(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)))
 
 # This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
 _json_contents := $(_json_contents)__SV_END
